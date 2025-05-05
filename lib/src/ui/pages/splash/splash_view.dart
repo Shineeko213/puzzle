@@ -202,7 +202,7 @@ class _SplashViewState extends State<SplashView>
                 child: Image.asset(
                   'assets/images/jungle.png',
                   width: double.infinity,
-                  color: Colors.primaries[8].withOpacity(0.3),
+                  color: Colors.primaries[8].withValues(alpha: 0.1),
                 ),
               ),
             );

@@ -14,7 +14,6 @@ class GameBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bool isDarkMode = context.isDarkMode;
-    //  Colors.primaries[i].withOpacity(0.2);
     return Stack(
       children: [
         Positioned.fill(

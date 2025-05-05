@@ -11,7 +11,7 @@ class ThemeController extends ChangeNotifier {
   late bool _isDarkMode;
   bool get isDarkMode => _isDarkMode;
 
-  ThemeMode get themeMode => isDarkMode ? ThemeMode.dark : ThemeMode.light;
+  ThemeMode get themeMode => isDarkMode ? ThemeMode.light : ThemeMode.dark;
 
   ThemeController() {
     _isDarkMode = _settings.isDarkMode;

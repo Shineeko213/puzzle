@@ -34,23 +34,6 @@ class GameAppBar extends StatelessWidget {
         ),
         child: Row(
           children: [
-            FittedBox(
-              child: Text.rich(
-                TextSpan(
-                  text: "${isIOS ? "Created" : "Powered"}\n",
-                  children: const [
-                    TextSpan(
-                      text: "with",
-                      style: TextStyle(
-                        fontSize: 24,
-                        height: 1,
-                      ),
-                    ),
-                  ],
-                ),
-                textAlign: TextAlign.right,
-              ),
-            ),
             const SizedBox(width: 5),
             if (context.isDarkMode)
               ColorFiltered(
@@ -63,12 +46,6 @@ class GameAppBar extends StatelessWidget {
             Consumer<GameController>(
               builder: (_, controller, __) => Row(
                 children: [
-                  MyIconButton(
-                    onPressed: controller.toggleVibration,
-                    iconData: controller.state.vibration
-                        ? PuzzleIcons.vibration
-                        : PuzzleIcons.vibration_off,
-                  ),
                   const SizedBox(width: 10),
                   MyIconButton(
                     onPressed: controller.toggleSound,
@@ -84,8 +61,8 @@ class GameAppBar extends StatelessWidget {
               builder: (_, controller, __) => MyIconButton(
                 onPressed: controller.toggle,
                 iconData: controller.isDarkMode
-                    ? PuzzleIcons.dark_mode
-                    : PuzzleIcons.brightness,
+                    ? PuzzleIcons.brightness
+                    : PuzzleIcons.dark_mode,
               ),
             ),
           ],
